@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  height: 100vh;
+  background-color: #1d3557;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Poppins", sans-serif;
+}
+section .result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 20vh;
+}
+section .result-container h1 {
+  font-size: 20pt;
+  text-align: center;
+  color: #f1faee;
+  font-weight: 400;
+}
+section .result-container p {
+  font-size: 17pt;
+  text-align: center;
+  color: #f1faee;
+}
+section .game-lobby {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+  justify-content: space-around;
+  transition: opacity 0.4s ease 0.4s;
+}
+section .game-lobby h1 {
+  color: #c4c9c3;
+}
+section .game-lobby .btn {
+  width: 200px;
+  height: 50px;
+  font-size: 15pt;
+}
+section .Match {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  right: 15%;
+  transition: opacity 0.4s ease 0.5s;
+}
+section .Match .update-result {
+  font-size: 25pt;
+  color: #f1faee;
+  text-align: center;
+}
+section .Match .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+section .Match .img-container .player-hand {
+  transform: rotateY(180deg);
+}
+section .Match .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+section .Match .button-container button {
+  width: 150px;
+  height: 50px;
+  font-size: 15pt;
+}
+
+div.opsOff {
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.opsOn {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@keyframes playerH {
+  0% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  15% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  35% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  60% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  75% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  90% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  100% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+}
+@keyframes computerH {
+  0% {
+    transform: translateY(0px);
+  }
+  15% {
+    transform: translateY(-50px);
+  }
+  35% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(-50px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  90% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

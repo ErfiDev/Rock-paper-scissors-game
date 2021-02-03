@@ -1,0 +1,166 @@
+$bc: "background-color";
+
+@mixin flex-rows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+}
+
+button{
+    font-family: 'Poppins', sans-serif;
+}
+
+section
+{
+    height: 100vh;
+    #{$bc}: #1d3557;
+    @include flex-rows();
+    justify-content: space-around;
+    font-family: 'Poppins', sans-serif;
+
+    .result-container{
+        @include flex-rows();
+        justify-content: space-around;
+        height: 20vh;
+
+        h1{
+            font-size: 20pt;
+            text-align: center;
+            color: #f1faee;
+            font-weight: 400;
+        }
+        p{
+            font-size: 17pt;
+            text-align: center;
+            color: #f1faee;
+        }
+    }
+
+    .game-lobby{
+        @include flex-rows();
+        flex-direction: column;
+        height: 60vh;
+        justify-content: space-around;
+        transition: opacity 0.4s ease 0.4s;
+
+        h1{
+            color: #c4c9c3;
+        }
+
+        .btn{
+            width: 200px;
+            height: 50px;
+            font-size: 15pt;
+        }
+    }
+
+    .Match{
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        right: 15%;
+        transition: opacity 0.4s ease 0.5s;
+
+        .update-result{
+            font-size: 25pt;
+            color: #f1faee;
+            text-align: center;
+        }
+        
+        .img-container{
+            @include flex-rows();
+            justify-content: space-around;
+
+            .player-hand{
+                transform: rotateY(180deg);
+            }
+        }
+
+        .button-container{
+            @include flex-rows();
+            justify-content: space-around;
+
+            button{
+                width: 150px;
+                height: 50px;
+                font-size: 15pt;
+            }
+        }
+    }
+}
+
+
+div.opsOff
+{
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.opsOn
+{
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+@keyframes playerH{
+    0%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    15%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    35%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    60%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    75%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    90%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    100%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+}
+
+
+@keyframes computerH{
+    0%{
+        transform: translateY(0px);
+    }
+    15%{
+        transform: translateY(-50px);
+    }
+    35%{
+        transform: translateY(0px);
+    }
+    60%{
+        transform: translateY(-50px);
+    }
+    75%{
+        transform: translateY(0px);
+    }
+    90%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
