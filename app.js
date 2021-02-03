@@ -1,3 +1,5 @@
+//Made by Erfanhanifezade@gmail.com
+
 const game = ()=>{
     let playerS = 0;
     let computerS = 0;
